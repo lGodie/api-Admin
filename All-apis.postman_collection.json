@@ -1,0 +1,716 @@
+{
+	"info": {
+		"_postman_id": "60fbcec2-d440-4892-b65c-e6bea813deb0",
+		"name": "All-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Crear usuario con token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\":\"DiegoBack\",\r\n    \"Document\":\"123456\",\r\n    \"Email\" : \"Diego@gmail.com\",\r\n\t\"FirstName\" : \"Diego\",\r\n\t\"LastName\" : \"Zapata\",\r\n\t\"Password\" : \"Hyjelead2!-\",\r\n\t\"IdWorkSubArea\" : 1,\r\n\t\"IdIdentificationTypes\" : 1,\r\n\t\"IdRole\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Account/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Account",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"Dani@gmail.com\",\r\n    \"Password\":\"pasword1.-dd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Account/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Account",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Areas",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"TD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Areas/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Areas",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/Areas/FindAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Areas",
+								"FindAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/Areas/Delete?Id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Areas",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/Areas/FindById?id=1152454",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Areas",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1152454"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":1016,\r\n    \"Name\":\"Update Arerr3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Areas/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Areas",
+								"Update"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "tipo de Identificacion ",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Registro \",\r\n    \"Code\":\"RR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/IdentificationType/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"IdentificationType",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/IdentificationType/FindAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"IdentificationType",
+								"FindAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/IdentificationType/FindById?id=2003",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"IdentificationType",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/IdentificationType/Delete?Id=2002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"IdentificationType",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "2002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":1004,\r\n    \"Code\":\"reee\",\r\n    \"Name\":\"Registroba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/IdentificationType/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"IdentificationType",
+								"Update"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Ventas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Role/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Role",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/Role/FindAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Role",
+								"FindAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/Role/FindById?id=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Role",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/Role/Delete?Id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Role",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":5,\r\n    \"Name\":\"Venticas\",\r\n    \"Active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Role/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Role",
+								"Update"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "SubArea",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"FrontEnd2\",\r\n    \"idArea\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/SubAreas/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"SubAreas",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/SubAreas/FindAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"SubAreas",
+								"FindAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/SubAreas/FindById?id=1002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"SubAreas",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/SubAreas/Delete?Id=100",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"SubAreas",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":1002,\r\n    \"IdArea\":1,\r\n    \"Name\":\"Update Arerr3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/SubAreas/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"SubAreas",
+								"Update"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Paginación",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44395/api/users?ActualPage=1&PageSize=10&searchString=1155589652&idrole=2&PageQuantity=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "ActualPage",
+									"value": "1"
+								},
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "searchString",
+									"value": "1155589652"
+								},
+								{
+									"key": "idrole",
+									"value": "2"
+								},
+								{
+									"key": "PageQuantity",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
